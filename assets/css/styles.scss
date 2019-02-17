@@ -10,6 +10,21 @@ html,body{
 	min-height: 100vh;
 }
 
+.clear-atag{
+	color: inherit;
+	
+	&:hover{
+		text-decoration: none;
+		color: inherit;
+	}
+	
+	&:visited{
+		color: inherit;
+	}
+}
+
+
+/* ========================== NAVBAR =============================== */
 nav.navbar.navbar-expand-sm.navbar-light{
 	position: absolute;
 	z-index: 100;
@@ -27,6 +42,10 @@ nav.navbar.navbar-expand-sm.navbar-light{
 					 0px 18px 23px rgba(0,0,0,0.1);
 	}
 	
+	button.navbar-toggler{
+		-webkit-filter: invert(100%);
+	}
+	
 	a.nav-link{
 		color: #ffffff;
 		font-size: 1.2rem;
@@ -38,6 +57,23 @@ nav.navbar.navbar-expand-sm.navbar-light{
 		
 		div.dropdown-menu.show{
 			color: red;
+		}
+	}
+	
+	button.nav-link{
+		color: #ffffff;
+		font-size: 1.2rem;
+		padding: 0.5rem 1.5rem;
+		background: rgba( 255 , 255 , 255 , 0.0 );
+		border: none;
+		
+		&:hover{
+			color: #ddddff;
+			cursor: pointer;
+		}
+		
+		&:focus{
+			outline: none;
 		}
 	}
 	
@@ -62,6 +98,7 @@ nav.navbar.navbar-expand-sm.navbar-light{
 	top: 50px !important;
 }
 
+/* ========================== LOGIN =============================== */
 form.login{
 	position: absolute;
 	z-index: 1000;
@@ -103,10 +140,12 @@ form.login-shown{
 	top: 50%;
 }
 
+
+/* ========================== HEADER =============================== */
 header{
 	width: 100%;
 	height: 100vh;
-	background: url( "../img/dog3.jpg" );
+	background: url( "../img/dog-main.jpg" );
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
@@ -126,6 +165,84 @@ header{
 }
 
 
-section.more-info{
-	height: 500px;
+/* ========================== SERVICES =============================== */
+section.services{
+	min-height: 500px;
+	padding: 70px 75px;
+	background: url( '../img/services-bg.jpg' );
+	background-size: contain;
+	
+	hr{
+		border: 0;
+		height: 1px;
+		background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0));
+	}
+	
+	h6.sub-title{
+		text-transform: uppercase;
+		letter-spacing: 5px;
+		text-align: center;
+		font-size: 1.3rem;
+		margin-bottom: 50px;
+	}
+	
+	h2{
+		text-transform: uppercase;
+		letter-spacing: 5px;
+		text-align: center;
+		font-size: 3.2rem;
+	}
+	
+	.row{
+		color: #303030;
+		margin: 35px 0;
+		text-align: center;
+		
+		img{
+			width: 80%;
+			height: auto;
+			border-radius: 3px;
+			box-shadow: -2px 3px 15px 1px rgba( 0 , 0 , 0 , 0.5 );
+		}
+		
+		.description{
+			
+			.service-title{
+				color: #205010;
+				display: inline-block;
+				text-align: center;
+				font-size: 2.5rem;
+				margin-bottom: 10px;
+				font-weight: 600;
+				
+				&:hover{
+					color: #008000;
+				}
+			}
+			
+			p{
+				text-align: left;
+				font-size: 1.3rem;
+				text-indent: 10%;
+				margin-bottom: 20px;
+				
+				a{
+					text-indent: 0;
+					font-size: 1.1rem;
+					float: right;
+					margin-bottom: 15px;
+					
+					&:hover{ text-decoration: none; }
+					
+					i{ font-size: 0.9rem; }
+					
+					&::after{
+						content: "";
+						clear: both;
+					}
+				}
+			}
+		}
+		
+	}
 }
