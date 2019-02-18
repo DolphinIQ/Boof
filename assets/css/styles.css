@@ -65,7 +65,7 @@ nav.navbar.navbar-expand-sm.navbar-light div.dropdown-menu.show {
 }
 nav.navbar.navbar-expand-sm.navbar-light div.dropdown-menu.show a.dropdown-item {
   color: #ffffff;
-  text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4), 0px -2px 3px rgba(0, 0, 0, 0.4), 0px 8px 13px rgba(0, 0, 0, 0.1), 0px 18px 23px rgba(0, 0, 0, 0.1);
+  text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.4), 0px -1px 4px rgba(0, 0, 0, 0.4), 0px 5px 9px rgba(0, 0, 0, 0.1), 0px 10px 15px rgba(0, 0, 0, 0.1);
 }
 nav.navbar.navbar-expand-sm.navbar-light div.dropdown-menu.show a.dropdown-item:hover {
   background: rgba(255, 255, 255, 0.3);
@@ -122,7 +122,7 @@ header {
   background-position: center;
 }
 header h1 {
-  text-align: center;
+  margin-left: 15%;
   font-size: 3rem;
   color: #ffffff;
   padding-top: 40vh;
@@ -147,13 +147,14 @@ section.services h6.sub-title {
   letter-spacing: 5px;
   text-align: center;
   font-size: 1.3rem;
-  margin-bottom: 50px;
+  margin-bottom: 60px;
 }
 section.services h2 {
   text-transform: uppercase;
   letter-spacing: 5px;
   text-align: center;
   font-size: 3.2rem;
+  margin-top: 10px;
 }
 section.services .row {
   color: #303030;
@@ -175,7 +176,7 @@ section.services .row .description .service-title {
   font-weight: 600;
 }
 section.services .row .description .service-title:hover {
-  color: #008000;
+  color: #108000;
 }
 section.services .row .description p {
   text-align: left;
@@ -198,6 +199,82 @@ section.services .row .description p a i {
 section.services .row .description p a::after {
   content: "";
   clear: both;
+}
+
+/* ======================= RECOMMENDATIONS ============================= */
+section.recommendations {
+  background: #60b040;
+  min-height: 300px;
+  color: #ffffff;
+  padding: 60px 10%;
+  /* end of .slider */
+}
+section.recommendations .slider {
+  position: relative;
+  min-height: 200px;
+}
+section.recommendations .slider img {
+  display: block;
+  margin-left: auto;
+  height: 200px;
+  border-radius: 50%;
+  border: 3px solid #007000;
+}
+@media screen and (max-width: 768px) {
+  section.recommendations .slider img {
+    margin-right: auto;
+  }
+}
+section.recommendations .slider .text {
+  padding: 15px 25px;
+}
+section.recommendations .slider .text h3 {
+  font-size: 1.6rem;
+}
+section.recommendations .slider .text p {
+  text-indent: 20px;
+  font-size: 1.2rem;
+  font-style: italic;
+}
+section.recommendations .slider .text::after {
+  content: "";
+  clear: both;
+}
+@media screen and (max-width: 768px) {
+  section.recommendations .slider .text h3 {
+    text-align: center;
+  }
+}
+section.recommendations .slider .next-opinion {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  font-size: 2rem;
+  transition: all 200ms;
+}
+section.recommendations .slider .next-opinion:hover {
+  cursor: pointer;
+  color: #ddf0dd;
+  transform: scale(1.15, 1.15);
+}
+
+/* ======================= FOOOTER ============================= */
+footer {
+  background-color: #505050;
+  color: #ffffff;
+  padding: 40px 10%;
+  text-align: center;
+}
+footer h3 {
+  margin: 30px 0 30px;
+}
+footer .data-row {
+  display: block;
+  margin-bottom: 15px;
+  transition: all 200ms;
+}
+footer .data-row:hover {
+  color: #d5d5d5;
 }
 
 /*# sourceMappingURL=styles.css.map */
